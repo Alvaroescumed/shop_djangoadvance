@@ -1,6 +1,6 @@
 import requests
 
-# Obtener los datos de la API externa
+# Obtenemos los datos de la API externa
 response = requests.get('https://fakestoreapi.com/products/categories')
 categories = response.json()
 

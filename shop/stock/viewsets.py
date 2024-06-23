@@ -5,6 +5,7 @@ from .models import *
 from .serializers import *
 from .permissions import *
 
+# Creamos una viewset que nos filtre los productos por categorias
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer

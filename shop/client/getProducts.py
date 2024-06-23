@@ -1,7 +1,6 @@
 import requests
 from getpass import getpass
 from pprint import pprint 
-# Obtener los datos de la API externa
 
 url = 'http://127.0.0.1:8000/api/products/'
 endpoint = 'http://127.0.0.1:8000/auth/'
@@ -21,4 +20,4 @@ if token_res.status_code == 200:
 
     res = requests.get(url, headers=headers)
 
-    print(res.json())
+    pprint(res.json())

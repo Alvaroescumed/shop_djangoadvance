@@ -1,7 +1,6 @@
 import requests
 from getpass import getpass
 from pprint import pprint 
-# Obtener los datos de la API externa
 
 url = 'http://127.0.0.1:8000/api/products/2'
 endpoint = 'http://127.0.0.1:8000/auth/'

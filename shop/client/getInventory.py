@@ -1,7 +1,7 @@
 import requests
 from getpass import getpass
-from pprint import pprint 
-import json
+from pprint import pprint  
+# usamos pprint para que la respuesta en el terminal esté en formato json y no como un bloque de terxto
 
 url = 'http://127.0.0.1:8000/api/inventory/'
 endpoint = 'http://127.0.0.1:8000/auth/'
