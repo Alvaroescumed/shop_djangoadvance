@@ -23,4 +23,4 @@ class Inventory(models.Model):
     quantity = models.PositiveBigIntegerField()
 
     def __str__(self):
-        return f'{self.product.name} -- {self.product.quantity}'
+        return f'{self.product.name} -- {self.quantity}'
