@@ -8,4 +8,5 @@ urlpatterns = [
     path('category/<int:pk>', CategoryDetail.as_view(), name='category-detail'),
     path('inventory/', InventoryList.as_view(), name='inventory-list-create'),
     path('inventory/<int:pk>', InventoryDetail.as_view(), name='inventory-detail'),
+    path('catalog/', CatalogListView.as_view(), name='catalog-list')
 ]

@@ -22,10 +22,12 @@ class ProductDetail(generics.RetrieveUpdateDestroyAPIView):
 class CategoryList(generics.ListCreateAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+    permission_classes = [isGerente]
 
 class CategoryDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+    permission_classes = [isGerente]
 
 # ------ Vistas Inventario ---------
 
@@ -37,11 +39,12 @@ class InventoryList(generics.ListCreateAPIView):
 class InventoryDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Inventory.objects.all()
     serializer_class = InventorySerializer
+    permission_classes = [isGerente]
 
 
 # --------APIVIEWS---------
 
-class ProductWithInventory(APIView):
+class CatalogListView(APIView):
     def get(self, req):
 
         products = Product.objects.all()
